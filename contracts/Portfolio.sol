@@ -55,8 +55,8 @@ contract Portfolio{
        function insertProject(string calldata _name, string calldata _description, string calldata _image,string calldata _githubLink) public{
         require(msg.sender==owner,"You cannot add project to site");
         require(projectCount<3,"You cannot add more than 3 projects");
-        projectCount++;
         projects[projectCount]=Project(projectCount,_name,_description,_image,_githubLink);
+        projectCount++;
     }
 
     function changeProject(uint _id,string calldata _name, string calldata _description, string calldata _image,string calldata _githubLink) public{

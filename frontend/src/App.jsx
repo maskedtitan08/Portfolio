@@ -6,6 +6,7 @@ import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
 import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
+import Documents from "./components/documents/Documents";
 import './App.css';
 import { ethers } from "ethers";
 
@@ -25,8 +26,9 @@ function App() {
                {/* phla wala saveState koi bhi naam hai jis naam se aap function pass krenge child compo mein but dusra wala saveState function jo hm bhejna chah rhe */}
         <Wallet saveState={saveState} ></Wallet>    
         <Hero state={state}/>
-        <Projects state={state}/>
         <Skills />
+        <Projects state={state}/>
+        <Documents />
         <Experience state={state} />
         <Contact state={state}/>
         <Handles />

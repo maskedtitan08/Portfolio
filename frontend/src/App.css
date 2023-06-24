@@ -6,16 +6,18 @@
   --font-family: 'Manrope', sans-serif;
   /* colors */
 
+  
   --color-bg: #212121;
   --color-black: #131313;
   --color-blue: #1A44F0;
   --color-sky: #50B0F3;
   --color-card: #2c2d35;
+  
 }
 
 .App {
   width: 100%;
-  margin-left: 55px;
+  margin-left: 30px;
   /* margin: 0; */
   /* padding: 0; */
 }

@@ -1,5 +1,5 @@
 .exp-section {
-    color: white;
+    color: rgb(205, 247, 243);
     width: 100%;
     height: 100%;
     background-color: var(--color-bg);
@@ -9,10 +9,25 @@
     align-items: center;
     gap: 70px;
     padding-top: 70px;
+    padding-bottom: -20px;
+}
+
+.edu-tittle {
+    text-align: center;
+    padding-left:180px;
+    font-weight: bold;
+    font-size: 27px;
+    letter-spacing: 0.8px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    padding-bottom: 2px;
+    line-height: normal;
+    word-break: break-word;
+
 }
 
 .exp-section .title {
-    font-size: 28px;
+    font-size: 32px;
     text-transform: uppercase;
     padding-bottom: 4px;
     border-bottom-style: solid;
@@ -61,7 +76,7 @@
 }
 
 .edu-card .card-text2 {
-    color: var(--color-blue);
+    color:rgb(111, 206, 244);
     font-weight: 500;
     font-size: 22px;
 

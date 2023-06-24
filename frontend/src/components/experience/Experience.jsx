@@ -14,16 +14,20 @@ const Experience = ({ state }) => {
             setEducation(education);
         }
         contract && educationDetails();
-    }, [state])
 
-    useEffect(() => {
-        const { contract } = state;
         const experienceDetails = async () => {
-            const education = await contract.allExperiences();
+            const experience = await contract.allExperiences();
             setExperience(experience);
+            console.log(experience);
         }
         contract && experienceDetails();
+
     }, [state])
+
+    // useEffect(() => {
+    //     const { contract } = state;
+
+    // }, [state])
 
     return (
         <section className="exp-section">
@@ -46,58 +50,25 @@ const Experience = ({ state }) => {
                                 </p>
                             </div>)
                     })}
-
-
                 </div>
                 {/* experience */}
                 <div className="education">
                     <h1 className="edu-tittle">Experience</h1>
-                    {experience != "" && experience.map((exp) => {
+                    {experience != "" && experience.map((exper) => {
                         return (
                             <div className="edu-card">
                                 <p className="card-text1">
-                                    <SlCalender className='icon' /> {exp.timeWorked}
+                                    <SlCalender className='icon' /> {exper.timeWorked}
                                 </p>
-                                <h3 className="card-text2">{exp.designation}</h3>
+                                <h3 className="card-text2">{exper.designation}</h3>
                                 {/* <p className="card-text3">Description Of Your Course</p> */}
                                 <p className="card-text4">
-                                    {edu.companyName}
+                                    {exper.companyName}
                                 </p>
                             </div>)
                     })}
-                    {/* <div className="edu-card">
-                        <p className="card-text1">
-                            <SlCalender className='icon' /> March 2013 - Present
-                        </p>
-                        <h3 className="card-text2">Blockchain Developer Intern</h3>
-                        <p className="card-text3">learned this this and that.learned this this and that.learned this this and that.learned this this and that.</p>
-                        <p className="card-text4">
-                            Code Eater
-                        </p>
-                    </div> */}
-                    {/* card2 */}
-                    {/* <div className="edu-card">
-                        <p className="card-text1">
-                            <SlCalender className='icon' /> March 2013 - Present
-                        </p>
-                        <h3 className="card-text2">Blockchain Developer Intern</h3>
-                        <p className="card-text3">learned this this and that.learned this this and that.learned this this and that.learned this this and that.</p>
-                        <p className="card-text4">
-                            Code Eater
-                        </p>
-                    </div>
-                    {/* card3 */}
-                    {/* <div className="edu-card">
-                        <p className="card-text1">
-                            <SlCalender className='icon' /> March 2013 - Present
-                        </p>
-                        <h3 className="card-text2">Blockchain Developer Intern</h3>
-                        <p className="card-text3">learned this this and that.learned this this and that.learned this this and that.learned this this and that.</p>
-                        <p className="card-text4">
-                            Code Eater
-                        </p>
-                    </div> */}
                 </div>
+                
             </div>
         </section>
     )

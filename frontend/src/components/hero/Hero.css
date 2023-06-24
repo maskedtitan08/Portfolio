@@ -50,9 +50,11 @@
 }
 
 .hero-text p span {
-    color: var(--color-blue);
-    font-size: 16px;
-    font-weight: 400;
+    /* color: var(--color-blue); */
+    color-interpolation-filters: auto;
+    color: rgb(33, 174, 226);
+    font-size: 24px;
+    font-weight: 900;
 
 }
 

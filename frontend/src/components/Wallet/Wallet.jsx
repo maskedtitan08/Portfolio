@@ -39,7 +39,7 @@ const Wallet = ({ saveState }) => {
     } else {
       provider = new ethers.BrowserProvider(window.ethereum)
       signer = await provider.getSigner();
-      const contractAddress = "0x0Bc4acDE91918B6A36c762E3BFCd1D53915d2767";
+      const contractAddress = "0x703436f3FD3d4c9399a914138bE0486c9Ae4693B";
 
       const contract = new ethers.Contract(
         contractAddress, Portfolio.abi, signer
