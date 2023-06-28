@@ -5,14 +5,13 @@ import { Modal, ModalHeader, ModalBody, Row, Button } from "reactstrap"
 import "./Projects.css"
 
 const Projects = ({state}) => {
-    // const [modal, setModal] = useState(false);
     const [projects,setProjects] = useState("");
     useEffect(()=> {
         const {contract} = state;
         const projectDetails = async()=> {
             const projects = await contract.allProjects();
             setProjects(projects);
-            console.log(projects);
+            // console.log(projects);
         }
         contract && projectDetails();
     },[state]);

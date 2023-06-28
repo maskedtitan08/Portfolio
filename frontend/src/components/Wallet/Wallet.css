@@ -16,9 +16,9 @@
  }
  
  .connectBTN {
-     width: 160px;
-     height: 38px;
-     font-size: 14px;
+     width: auto;
+     height: auto;
+     font-size:14px;
      font-weight: 400;
      color: white;
      font-weight: 400;

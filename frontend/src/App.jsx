@@ -28,7 +28,7 @@ function App() {
         <Hero state={state}/>
         <Skills />
         <Projects state={state}/>
-        <Documents />
+        <Documents state={state}/>
         <Experience state={state} />
         <Contact state={state}/>
         <Handles />
