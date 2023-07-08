@@ -8,27 +8,6 @@ const Wallet = ({ saveState }) => {
   const isAndroid = /android/i.test(navigator.userAgent);   //created this varibale to check whether user is using site on desktop or android
 
   const init = async () => {
-
-    // const provider = new ethers.providers.Web3Provider(window.ethereum);
-    // try {
-    //   const provider = new ethers.providers.BrowserProvider(window.ethereum);
-    //   // const accounts = await provider.send("eth_requestAccounts", []);
-    //   const signer = provider.getSigner();
-
-    //   const contractAddress = "0x0B45519effF8f6738528bA196279f54f3FD7B768";
-
-    //   const contract = new ethers.Contract(
-    //     contractAddress,Portfolio.abi,signer
-    //   );
-    //   setConnected(false);
-    //   saveState(contract);
-    //   console.log(contract);
-
-    // } catch(error) {
-    //   alert(error);
-    //   alert("install metamask");
-    // }
-
     let signer = null;
     let provider;
     if (window.ethereum == null) {
@@ -39,6 +18,8 @@ const Wallet = ({ saveState }) => {
     } else {
       provider = new ethers.BrowserProvider(window.ethereum)
       signer = await provider.getSigner();
+      const account = await signer.getAddress();
+      console.log(account);
       const contractAddress = "0x703436f3FD3d4c9399a914138bE0486c9Ae4693B";
 
       const contract = new ethers.Contract(
@@ -49,6 +30,8 @@ const Wallet = ({ saveState }) => {
       console.log(contract);
     }
   }
+  console.log(connected);
+  // console.log(contract);
 
   return (
     <>

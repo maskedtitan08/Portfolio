@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
-import { FaDonate } from 'react-icons/fa';
-import { Modal, ModalHeader, ModalBody, Row, Button } from "reactstrap"
+// import { FaDonate } from 'react-icons/fa';
+// import { Modal, ModalHeader, ModalBody, Row, Button } from "reactstrap"
 // import img from "../../assets/img1.png"
 import "./Projects.css"
 
