@@ -19,10 +19,10 @@ const Projects = ({state}) => {
         <section className="project-section">
             <h1 className="title">Projects </h1>
             <div className="card-wrapper">
-                 {projects!=="" && projects.map((project)=>{          // paasing projects array
+                 {projects!=="" && projects.map((project,index)=>{          // paasing projects array
                     const githubLink = `https://github.com/maskedtitan08/${project.name}`
                                                     // contract k project.name mein whi naam save krna jo repo ka ho github mein
-                    return ( <a href= {githubLink} className="project-card" target='_blank' rel="noopener noreferrer" >
+                    return ( <a href= {githubLink} className="project-card" target='_blank' rel="noopener noreferrer" key={index}>
                     <div className="card-img">
                         <img src={`https://ipfs.filebase.io/ipfs/${project.image}`} alt="" /></div>
                         {/* change img => https://gateway.pinata.cloud/ipfs/${projects.image} */}

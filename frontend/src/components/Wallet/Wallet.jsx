@@ -17,6 +17,10 @@ const Wallet = ({ saveState }) => {
 
     } else {
       provider = new ethers.BrowserProvider(window.ethereum)
+
+      const chainId = 80001;
+      const network = await provider.getNetwork();
+      if(network.chainId==chainId){
       signer = await provider.getSigner();
       const account = await signer.getAddress();
       console.log(account);
@@ -28,6 +32,10 @@ const Wallet = ({ saveState }) => {
       setConnected(false);
       saveState(contract);
       console.log(contract);
+      }
+      else {
+        alert("Connect to polygon mumbai testnet to visit portfolio");
+      }
     }
   }
   console.log(connected);

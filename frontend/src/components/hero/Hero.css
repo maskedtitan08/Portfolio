@@ -34,7 +34,7 @@
 
 }
 
-/* =========hero text========== */
+
 
 
 .hero-text {
@@ -88,7 +88,7 @@
     background-color: var(--color-bg);
 }
 
-/* .hero-text .connect-btn {
+.hero-text .connect-btn {
     margin-top: 36px;
     color: white;
     font-weight: 400;
@@ -98,7 +98,7 @@
     border: 2px solid rgb(86, 88, 226);
     border-radius: 30px;
     margin-left: 40px;
-} */
+}
 
 .hero-text .connect-btn .icon {
     color: black;
@@ -110,7 +110,7 @@
     text-align: center;
 }
 
-/* =========media querries========== */
+
 @media screen and (max-width: 420px) {
 
     .hero {

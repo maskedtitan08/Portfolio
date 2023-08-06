@@ -26,6 +26,18 @@ const Hero = ({state}) => {
         contract && fetchImage();
 
     },[state]);
+
+    const date = new Date()
+    const hours = date.getHours()
+    let timeOfDay
+    
+    if (hours < 12) {
+        timeOfDay = "morning"
+    } else if (hours >= 12 && hours < 17) {
+        timeOfDay = "afternoon"
+    } else {
+        timeOfDay = "evening"
+    }
     
 
     return (
@@ -34,7 +46,8 @@ const Hero = ({state}) => {
             <div className="hero-text">
                 {/* not stored this name in contract because it not efficient it will take unnecessary space */}
                 {/* because naam br br change nhi hota to usko yahan rkh liya */}
-                <p><span>Shreshtha gupta </span>  
+                <p><span>Good {timeOfDay} everyone</span></p>
+                <p><span>I'm Shreshtha gupta </span>  
                     </p>
                 <h1>I develop decentralised apps in web3 space.</h1>
                 <h3>Description : {description}</h3>

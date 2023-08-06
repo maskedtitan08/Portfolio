@@ -17,7 +17,7 @@
     width: 60px;
 }
 
-/* =========media querries========== */
+
 @media screen and (max-width: 420px) {
     .socials {
         gap: 20px;
